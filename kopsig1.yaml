@@ -3,11 +3,11 @@ kind: InstanceGroup
 metadata:
   creationTimestamp: 2019-09-08T13:39:21Z
   labels:
-    kops.k8s.io/cluster: NAME
+    kops.k8s.io/cluster: kubecluster.student24.courseandlabs.com
   name: master-us-west-2a
 spec:
   image: kope.io/k8s-1.12-debian-stretch-amd64-hvm-ebs-2019-06-21
-  machineType: t3a.small
+  machineType: t2.small
   maxSize: 1
   minSize: 1
   nodeLabels:
@@ -24,11 +24,11 @@ kind: InstanceGroup
 metadata:
   creationTimestamp: 2019-09-08T13:39:21Z
   labels:
-    kops.k8s.io/cluster: NAME
+    kops.k8s.io/cluster: kubecluster.student24.courseandlabs.com
   name: master-us-west-2b
 spec:
   image: kope.io/k8s-1.12-debian-stretch-amd64-hvm-ebs-2019-06-21
-  machineType: t3a.small
+  machineType: t2.small
   maxSize: 1
   minSize: 1
   nodeLabels:
@@ -46,11 +46,11 @@ kind: InstanceGroup
 metadata:
   creationTimestamp: 2019-09-08T13:39:21Z
   labels:
-    kops.k8s.io/cluster: NAME
+    kops.k8s.io/cluster: kubecluster.student24.courseandlabs.com
   name: master-us-west-2c
 spec:
   image: kope.io/k8s-1.12-debian-stretch-amd64-hvm-ebs-2019-06-21
-  machineType: t3a.small
+  machineType: t2.small
   maxSize: 1
   minSize: 1
   nodeLabels:
@@ -68,13 +68,13 @@ kind: InstanceGroup
 metadata:
   creationTimestamp: 2019-09-08T13:39:21Z
   labels:
-    kops.k8s.io/cluster: NAME
+    kops.k8s.io/cluster: kubecluster.student24.courseandlabs.com
   name: nodes
 spec:
   image: kope.io/k8s-1.12-debian-stretch-amd64-hvm-ebs-2019-06-21
-  machineType: t3a.medium
-  maxSize: 3
-  minSize: 3
+  machineType: t2.small
+  maxSize: 4
+  minSize: 4
   nodeLabels:
     kops.k8s.io/instancegroup: nodes
   role: Node
